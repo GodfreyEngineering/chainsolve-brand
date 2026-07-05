@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" role="img" aria-label="ChainSolve">
+  <defs>
+    <mask id="mA" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+      <rect width="100" height="100" fill="#fff"/>
+      <!-- Ring B carves the weave notch in Ring A at both crossings -->
+      <rect x="38" y="38" width="54" height="54" rx="16" fill="none" stroke="#000" stroke-width="19"/>
+    </mask>
+    <mask id="mB" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+      <rect width="100" height="100" fill="#fff"/>
+      <!-- vertical halo carves Ring B where A's right edge passes over (62,38) -->
+      <line x1="62" y1="28" x2="62" y2="48" stroke="#000" stroke-width="19"/>
+    </mask>
+  </defs>
+  <!-- Ring A (top-left) -->
+  <rect x="8" y="8" width="54" height="54" rx="16" fill="none" stroke="#1C1815" stroke-width="12" mask="url(#mA)"/>
+  <!-- Ring B (bottom-right) -->
+  <rect x="38" y="38" width="54" height="54" rx="16" fill="none" stroke="#1C1815" stroke-width="12" mask="url(#mB)"/>
+  <!-- Redraw A's right edge OVER B to complete the alternating weave -->
+  <line x1="62" y1="30" x2="62" y2="46" stroke="#1C1815" stroke-width="12" stroke-linecap="butt"/>
+</svg>

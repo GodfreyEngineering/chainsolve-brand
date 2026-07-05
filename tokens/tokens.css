@@ -1,0 +1,37 @@
+/* ChainSolve — design tokens (Brand & Design System v1.0)
+   Ramps are the single source; semantic tokens reference them per theme. */
+:root {
+  /* Terracotta — primary ramp */
+  --tc-50:#FBEEE9; --tc-100:#F6D9CF; --tc-200:#EFB8A6; --tc-300:#E8977C; --tc-400:#E3785E;
+  --tc-500:#E06A4E; --tc-600:#C8543A; --tc-700:#A5412C; --tc-800:#7E3222; --tc-900:#55231A;
+  /* Warm neutrals */
+  --n-0:#FFFFFF; --n-50:#FAF4F0; --n-100:#F2E9E3; --n-200:#E3D7CE; --n-300:#C9BAB0; --n-400:#A2938A;
+  --n-500:#7A6E66; --n-600:#574E48; --n-700:#3B342F; --n-800:#2A2420; --n-900:#1C1815; --n-950:#14110F;
+  /* Functional */
+  --success:#3E9E6E; --warning:#E0A33D; --danger:#D6453C; --info:#4CB6C6;
+  /* Workbench accents */
+  --wb-automotive:#E0533A; --wb-structural:#C77E52; --wb-aerospace:#4CB6C6; --wb-finance:#3E9E6E; --wb-ml:#8B6CD9;
+  /* Radius · spacing · motion */
+  --r-sm:6px; --r-md:8px; --r-lg:12px; --r-xl:16px; --r-2xl:20px; --r-full:999px;
+  --space:4px; /* multiply: space-2=8 … space-6=24 … space-12=48 */
+  --ease-standard:cubic-bezier(.2,0,0,1); --ease-emphasized:cubic-bezier(.3,0,0,1);
+  --dur-fast:120ms; --dur-base:200ms; --dur-slow:320ms;
+  --shadow-sm:0 1px 2px rgba(28,24,21,.06); --shadow-md:0 2px 8px rgba(28,24,21,.08);
+  --shadow-lg:0 8px 24px rgba(28,24,21,.12); --ring:0 0 0 3px rgba(224,106,78,.28);
+  /* Type */
+  --font-display:'Montserrat',system-ui,sans-serif;
+  --font-sans:'IBM Plex Sans',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+/* ---- Light theme (marketing, docs) ---- */
+[data-theme="light"] {
+  --bg:#FAF4F0; --surface:#FFFFFF; --surface-2:#F2E9E3; --border:#E3D7CE; --border-strong:#C9BAB0;
+  --text:#1C1815; --text-muted:#574E48; --text-subtle:#7A6E66;
+  --accent:#E06A4E; --accent-hover:#C8543A; --accent-text:#A5412C; --accent-contrast:#FFFFFF;
+}
+/* ---- Dark theme (product default) ---- */
+[data-theme="dark"] {
+  --bg:#14110F; --surface:#1C1815; --surface-2:#241E1A; --border:#2A2420; --border-strong:#3B342F;
+  --text:#FAF4F0; --text-muted:#C9BAB0; --text-subtle:#7A6E66;
+  --accent:#E06A4E; --accent-hover:#E37B5E; --accent-text:#E8977C; --accent-contrast:#14110F;
+}
